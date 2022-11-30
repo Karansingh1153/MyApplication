@@ -1,8 +1,10 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button

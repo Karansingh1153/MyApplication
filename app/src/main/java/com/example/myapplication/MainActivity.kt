@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
         binding.btn1.setOnClickListener {
             val intent = Intent(this@MainActivity,SecondActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btn2.setOnClickListener {
+            Intent(Intent.ACTION_VIEW).setType(ContactsContract.Contacts.CONTENT_TYPE).apply {
+                startActivity(this)
+            }
         }
     }
 }
